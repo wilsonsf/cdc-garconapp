@@ -1,3 +1,3 @@
-# Casa do Código - GarçonApp
+# GarçonApp
 
 Aplicativo trabalhado no livro Aplicações Móveis com Cordova e PhoneGap da Casa do Código
