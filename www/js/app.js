@@ -1,3 +1,5 @@
+$('.modal-trigger').leanModal();
+
 $('.collection')
   .on('click', '.collection-item', function(){
 
