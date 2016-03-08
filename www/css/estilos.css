@@ -4,3 +4,8 @@
 body {
   background-color: #F2F2F2;
 }
+.titulo {
+  font-size: 1.3rem;
+  margin-left: 5%;
+  margin-right: auto;
+}
