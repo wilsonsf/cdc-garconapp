@@ -32,3 +32,15 @@ $('#confirmar').on('click', function(){
 
   $('#resumo').empty().text(texto);
 });
+
+// Ao clicar na quantidade, ela é removida
+$('.collection').on('click','.badge', function(){
+  $(this).remove();
+  return false; //indica se deve deixar outros objetos capturarem a interação
+});
+
+// Ao clicar no botão, zera o número da mesa e chama remove todos os .badge
+$('.acao-limpar').on('click',function(){
+  $('#numero-mesa').val('');
+  $('.badge').remove();
+})
