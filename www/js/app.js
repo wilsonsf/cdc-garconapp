@@ -40,17 +40,20 @@ $('.collection').on('click','.badge', function(){
 });
 
 // Ao clicar no botão de limpar, apaga as entradas iniciando um novo pedido.
-$('.acao-limpar').on('click',function(){
-  $('#numero-mesa').val('');
-  $('.badge').remove();
+$('.acao-limpar').on('click',function () {
+  limpaPedido();
 });
 
 // Ao clicar no botão de pedir, indica que o pedido foi realizado e inicia um novo pedido.
 $('.acao-pedir').on('click',function(){
   var numeroMesa = $('#numero-mesa').val();
-  $('#numero-mesa').val('');
-  $('.badge').remove();
+  limpaPedido();
 
   Materialize.toast('Pedido realizado para mesa ' + numeroMesa + '.', 1000);
 });
 
+//Refactor
+function limpaPedido() {
+  $('#numero-mesa').val('');
+  $('.badge').remove();
+};
