@@ -57,4 +57,5 @@
     <engine name="ios" spec="~4.0.1" />
     <engine name="android" spec="~5.1.1" />
     <engine name="browser" spec="~4.0.0" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="~5.0.1" />
 </widget>
