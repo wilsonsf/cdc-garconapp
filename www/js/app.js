@@ -18,7 +18,7 @@ $('.collection')
   $badge.text(parseInt($badge.text()) + 1);
 
   var nomeProduto = this.firstChild.textContent;
-  Materialize.toast(nomeProduto + 'adicionado', 1000);
+  Materialize.toast(nomeProduto + ' adicionado', 1000);
 });
 
 // Percorre os itens que possuem quantidade adicionando no resumo
@@ -39,8 +39,18 @@ $('.collection').on('click','.badge', function(){
   return false; //indica se deve deixar outros objetos capturarem a interação
 });
 
-// Ao clicar no botão, zera o número da mesa e chama remove todos os .badge
+// Ao clicar no botão de limpar, apaga as entradas iniciando um novo pedido.
 $('.acao-limpar').on('click',function(){
   $('#numero-mesa').val('');
   $('.badge').remove();
-})
+});
+
+// Ao clicar no botão de pedir, indica que o pedido foi realizado e inicia um novo pedido.
+$('.acao-pedir').on('click',function(){
+  var numeroMesa = $('#numero-mesa').val();
+  $('#numero-mesa').val('');
+  $('.badge').remove();
+
+  Materialize.toast('Pedido realizado para mesa ' + numeroMesa + '.', 1000);
+});
+
