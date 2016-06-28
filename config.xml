@@ -64,8 +64,15 @@
     <engine name="android" spec="~5.1.1" />
     <engine name="browser" spec="~4.0.0" />
 
+    <!-- Para permitir requisições AJAX -->
     <access origin="http://cozinhapp.sergiolopes.org" />
     <access origin="http://*.sergiolopes.org" />
+
+    <!-- Para permitir links para outros sites -->
+    <allow-navigation href="http://sergiolopes.org/*" />
+
+    <!-- Para permitir realizar chamadas com números em texto escrito na aplicação -->
+    <allow-intent href="tel:*" />
 
     <plugin name="phonegap-plugin-barcodescanner" spec="~5.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~2.1.3" />

@@ -60,10 +60,6 @@ $('.acao-finalizar').on('click',function(){
       limpaPedido();
     }
   });
-  // var numeroMesa = $('#numero-mesa').val();
-  // limpaPedido();
-
-  // Materialize.toast('Pedido realizado para mesa ' + numeroMesa + '.', 1000);
 });
 
 // Código de acionamento da câmera
