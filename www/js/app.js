@@ -45,11 +45,25 @@ $('.acao-limpar').on('click',function () {
 });
 
 // Ao clicar no botão de pedir, indica que o pedido foi realizado e inicia um novo pedido.
-$('.acao-pedir').on('click',function(){
-  var numeroMesa = $('#numero-mesa').val();
-  limpaPedido();
+$('.acao-finalizar').on('click',function(){
+  $.ajax({
+    url : 'http://cozinhapp.sergiolopes.org/novo-pedido',
+    data : {
+      mesa: $('#numero-mesa').val(),
+      pedido: $('#resumo').text()
+    },
+    error: function(erro) {
+      Materialize.toast(erro.responseText, 3000, 'red-text');
+    },
+    success: function(dados) {
+      Materialize.toast(dados, 2000);
+      limpaPedido();
+    }
+  });
+  // var numeroMesa = $('#numero-mesa').val();
+  // limpaPedido();
 
-  Materialize.toast('Pedido realizado para mesa ' + numeroMesa + '.', 1000);
+  // Materialize.toast('Pedido realizado para mesa ' + numeroMesa + '.', 1000);
 });
 
 // Código de acionamento da câmera
